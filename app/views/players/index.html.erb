@@ -1,0 +1,11 @@
+<h1>Players</h1>
+
+
+<% @players.each do |player| %>
+
+    <p><%= player["first_name"] %></p>
+    <p><%= player["last_name"] %></p>
+    <p><%= player["position"] %></p>
+    <%= "-------------------------------" %>
+
+<% end %>
