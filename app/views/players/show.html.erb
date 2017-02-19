@@ -1,18 +1,22 @@
-<% if @player["first_name"] %>
-  <h1>Player Info</h1>
 
-  <div>
-    First Name: <%= @player["first_name"] %>
-  </div>
-  <div>
-    Last Name: <%= @player["last_name"] %>
-  </div>
-  <div>
-    Position: <%= @player["position"] %>
-  </div>
-  <div>
-    Team: <%= @player["pro_team"] %>
-  </div>
+<h1><%= @player.fullname %></h1>
 
-  <%= link_to "remove", "/players/#{@player["id"]}", method: :delete %>
-<% end %>
+<div>
+  Birthday: <%= @player.friendly_birthday %>
+</div>
+<div>
+  Team: <%= @player.pro_team %>
+</div>
+<div>
+  Salary: <%= number_to_currency(@player.salary) %>
+</div>
+<div>
+  Location: <%= @player.location %>
+</div>
+<div>
+  Quote: <%= @player.quote %>
+</div>
+
+
+<%= link_to "Edit", "/players/#{@player.id}/edit", method: :get, class: "btn btn-primary" %>
+<%= link_to "Remove", "/players/#{@player.id}", method: :delete, class: "btn btn-danger" %>

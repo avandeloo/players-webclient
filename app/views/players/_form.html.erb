@@ -1,0 +1,38 @@
+<h1><%= title %> Player</h1>
+
+<%= form_tag url, method: verb do %>
+  <div>
+    <%= label_tag :first_name %>:
+    <%= text_field_tag :first_name, @player.first_name %>
+  </div>
+  <div>
+    <%= label_tag :last_name %>:
+    <%= text_field_tag :last_name, @player.last_name %>
+  </div>
+  <div>
+    <%= label_tag :birthdate %>:
+    <%= text_field_tag :birthdate, @player.birthday %>
+  </div>
+  <div>
+    <%= label_tag :position %>:
+    <%= text_field_tag :position, @player.position %>
+  </div>
+  <div>
+    <%= label_tag :pro_team %>:
+    <%= text_field_tag :pro_team, @player.pro_team %>
+  </div>
+  <div>
+    <%= label_tag :salary %>:
+    <%= text_field_tag :salary, @player.salary %>
+  </div>
+  <div>
+    <%= label_tag :location %>:
+    <%= text_field_tag :location, @player.location %>
+  </div>
+  <div>
+    <%= label_tag :quote %>:
+    <%= text_field_tag :quote, @player.quote %>
+  </div>
+  <%= submit_tag "Submit" %>
+
+<% end %>
